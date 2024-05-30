@@ -1,36 +1,47 @@
 let currentFrame = 1;
-const totalFrames = 80;
+let totalFrames = 0;
 const element = document.getElementById("spiderman");
-element.style.background = `url("./rendered_spidey/0001.webp")`;
+let isScrolling = false;
+let lastFrame = 0;
 
-// Preload images
-const images = [];
-for (let i = 1; i <= totalFrames; i++) {
-  const img = new Image();
-  img.src = `./rendered_spidey/${i < 10 ? "000" : "00"}${i}.webp`;
-  images.push(img);
+// Function to load JSON file
+async function loadImages() {
+  const response = await fetch('images.json');
+  const data = await response.json();
+  return data.images;
 }
 
-// Debounce function to limit scroll event frequency
-function debounce(func, wait) {
-  let timeout;
-  return function (...args) {
-    const context = this;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(context, args), wait);
+// Preload images and set initial background
+loadImages().then(images => {
+  totalFrames = images.length;
+  element.style.background = `url("${images[0]}")`;
+
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const changeBackground = (e) => {
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        const isDown = e.deltaY > 0;
+
+        currentFrame += isDown ? 1 : -1;
+        if (currentFrame <= 0) currentFrame = 1;
+        if (currentFrame > totalFrames) currentFrame = totalFrames;
+
+        if (currentFrame !== lastFrame) {
+          element.style.background = `url("${images[currentFrame - 1]}")`;
+          lastFrame = currentFrame;
+        }
+
+        isScrolling = false;
+      });
+    }
+    isScrolling = true;
   };
-}
 
-const changeBackground = debounce((e) => {
-  const isDown = e.deltaY > 0;
-
-  currentFrame += isDown ? 1 : -1;
-  if (currentFrame <= 0) currentFrame = 1;
-  if (currentFrame > totalFrames) currentFrame = totalFrames;
-
-  element.style.background = `url("./rendered_spidey/${
-    currentFrame < 10 ? "000" : "00"
-  }${currentFrame}.webp")`;
-}, 5); // Adjust debounce delay as needed
-
-window.addEventListener("wheel", changeBackground);
+  window.addEventListener("wheel", changeBackground);
+}).catch(error => {
+  console.error('Error loading images:', error);
+});
