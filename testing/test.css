@@ -29,6 +29,7 @@ body {
   top: 30vh;
   border-radius: 10px;
 }
+
 .tracker {
   width: 20px;
   height: 20px;
@@ -37,6 +38,7 @@ body {
   position: absolute;
   right: -7px;
 }
+
 #bgimg {
   filter: blur(8px);
   position: absolute;
