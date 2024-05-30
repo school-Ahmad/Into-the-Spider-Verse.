@@ -1,0 +1,37 @@
+.spiderman {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  top: 0;
+  left: 0;
+}
+body {
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.scrollbar {
+  height: 200px;
+  width: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 50px;
+  top: 30vh;
+  border-radius: 10px;
+}
+.tracker {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: -7px;
+}
+
+
+
+
