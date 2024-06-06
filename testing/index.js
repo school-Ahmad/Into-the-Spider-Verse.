@@ -14,8 +14,11 @@ async function loadImages() {
 // Preload images and set initial background
 loadImages().then(images => {
   totalFrames = images.length;
+
+  // Set the initial background immediately
   element.style.background = `url("${images[0]}")`;
 
+  // Preload images asynchronously
   images.forEach(src => {
     const img = new Image();
     img.src = src;
