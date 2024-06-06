@@ -12,7 +12,7 @@ body {
 
 .hamburger-container {
   width: 100%;
-  z-index: 1000;
+  z-index: 5 !important;
 }
 
 .hamburger-navbar {
@@ -30,7 +30,7 @@ body {
 .hamburger-navbar .hamburger-menu-items {
   display: flex;
   padding-right: 50px;
-  z-index: 4 !important;
+  z-index: 5 !important;
   position: absolute;
 }
 
@@ -63,7 +63,7 @@ body {
   width: 32px;
   top: 20px;
   left: 20px;
-  z-index: 5;
+  z-index: 7 !important;
   opacity: 0;
   cursor: pointer;
 }
@@ -75,7 +75,7 @@ body {
   position: absolute;
   top: 17px;
   left: 20px;
-  z-index: 5;
+  z-index: 6 !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -105,7 +105,8 @@ body {
 
 .hamburger-navbar .hamburger-menu-items {
   padding-top: 120px;
-  background: rgba(0, 0, 0, 0.8); /* Use rgba for a slight transparency */
+  background: rgba(0, 0, 0, 0.8);
+  /* Use rgba for a slight transparency */
   height: 100vh;
   width: 100%;
   transform: translateX(-200%);
@@ -113,7 +114,8 @@ body {
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
   text-align: left;
-  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  backdrop-filter: blur(10px);
+  /* Adjust the blur radius as needed */
 }
 
 .hamburger-navbar .hamburger-menu-items li {
@@ -132,33 +134,22 @@ body {
   color: white;
 }
 
-.hamburger-nav-container
-  input[type="checkbox"]:checked
-  ~ .hamburger-menu-items {
+.hamburger-nav-container input[type="checkbox"]:checked~.hamburger-menu-items {
   transform: translateX(0);
 }
 
-.hamburger-nav-container
-  input[type="checkbox"]:checked
-  ~ .hamburger-lines
-  .hamburger-line1 {
+.hamburger-nav-container input[type="checkbox"]:checked~.hamburger-lines .hamburger-line1 {
   transform: rotate(45deg);
 }
 
-.hamburger-nav-container
-  input[type="checkbox"]:checked
-  ~ .hamburger-lines
-  .hamburger-line2 {
+.hamburger-nav-container input[type="checkbox"]:checked~.hamburger-lines .hamburger-line2 {
   transform: scaleY(0);
 }
 
-.hamburger-nav-container
-  input[type="checkbox"]:checked
-  ~ .hamburger-lines
-  .hamburger-line3 {
+.hamburger-nav-container input[type="checkbox"]:checked~.hamburger-lines .hamburger-line3 {
   transform: rotate(-45deg);
 }
 
-.hamburger-nav-container input[type="checkbox"]:checked ~ .hamburger-logo {
+.hamburger-nav-container input[type="checkbox"]:checked~.hamburger-logo {
   display: none;
 }

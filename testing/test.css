@@ -3,8 +3,8 @@ body {
   background-color: black;
   overflow: hidden;
   color: white;
-  cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Spiderman_Hand_Pointer.png"),
-    auto;
+  /* cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Spiderman_Hand_Pointer.png"),
+    auto; */
 }
 
 .spiderman {
@@ -59,7 +59,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent !important;
-  z-index: 2;
+  z-index: 1 !important;
   position: sticky;
 }
 
@@ -74,7 +74,7 @@ h1 {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  z-index: 6;
+  z-index: 4 !important;
   position: absolute;
   /* Background image and text clipping */
   background-image: url(./wallpaper.jpeg);
