@@ -1,17 +1,6 @@
 let currentFrame = 1;
 const totalFrames = 80;
 const element = document.getElementById("spiderman");
-
-// Load JSON configuration
-async function loadConfig() {
-  const response = await fetch('images.json'); // Fetch the JSON file
-  const data = await response.json();
-  console.log(data); // Log the configuration data to the console
-}
-
-loadConfig(); // Load the configuration
-
-// Set initial background
 element.style.background = `url("./rendered_spidey/0001.webp")`;
 
 // Preload images
@@ -39,7 +28,8 @@ const changeBackground = debounce((e) => {
   if (currentFrame <= 0) currentFrame = 1;
   if (currentFrame > totalFrames) currentFrame = totalFrames;
 
-  element.style.background = `url("./rendered_spidey/${currentFrame < 10 ? "000" : "00"}${currentFrame}.webp")`;
+  element.style.background = `url("./rendered_spidey/${currentFrame < 10 ? "000" : "00"
+    }${currentFrame}.webp")`;
 }, 5); // Adjust debounce delay as needed
 
 window.addEventListener("wheel", changeBackground);
