@@ -3,12 +3,9 @@ body {
   background-color: black;
   overflow: hidden;
   color: white;
-  /* cursor: url("https://cdn.custom-cursor.com/db/pointer/32/Spiderman_Hand_Pointer.png"),
-    auto; */
 }
 
 .spiderman {
-  /* margin-top: 56px; */
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -63,33 +60,103 @@ h1 {
   position: sticky;
 }
 
-.trailer {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  background-color: #000000;
-  /* Change to your preferred color */
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  z-index: 4 !important;
-  position: absolute;
-  /* Background image and text clipping */
-  background-image: url(./wallpaper.jpeg);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.trailer i {
-  margin-right: 8px;
-  /* Space between icon and text */
+.all-text-container {
+  width: 100%;
+  height: 300vh;
+  position: static;
+  top: 0;
+  left: 0;
 }
 
 .trailer:hover {
   background-color: #cc0000;
-  /* Darker shade on hover */
+}
+
+.trailer-link {
+  text-decoration: none;
+}
+.text-on-model-container {
+  position: absolute;
+  width: 38%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.trailer-line {
+  left: 15.2%;
+  height: 2px;
+  width: 90%;
+  background: black;
+}
+
+.trailer {
+  color: transparent;
+  background-image: url(./wallpaper.jpeg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  border-radius: 100%;
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4 !important;
+}
+
+.trailer i {
+  margin: 0;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4 !important; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px; /* Smaller padding for the outer container */
+  width: 80%;
+  max-width: 1040px;
+  background-color: transparent; /* Make it transparent */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 4 !important;
+}
+
+.modal-inner {
+  padding: 79px 20px;
+  background-color: #ff000036; /* The actual background color */
+  border-radius: 8px; /* Optional: match the outer border radius */
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 4 !important;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }

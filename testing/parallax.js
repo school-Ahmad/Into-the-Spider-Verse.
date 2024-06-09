@@ -1,4 +1,3 @@
-// Debounce function to limit scroll event frequency
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -11,7 +10,6 @@ function debounce(func, wait) {
 const parallaxBg = document.getElementById("bgimg");
 let scrollYBg = 0;
 const scrollBackground = debounce((e) => {
-  console.log("paralaxx");
   const isDown = e.deltaY > 0;
 
   function scrollStep() {
@@ -20,18 +18,16 @@ const scrollBackground = debounce((e) => {
     }
     scrollYBg += isDown ? 7 : -7;
     parallaxBg.style.transform = `translateY(${scrollYBg}px) translateZ(-1px) scale(2)`;
-    // if (scrollY < window.innerHeight) {
-    //   requestAnimationFrame(scrollStep);
-    // }
   }
 
   requestAnimationFrame(scrollStep);
 }, 5);
 
 const header = document.getElementById("spiderheader");
+const allText = document.getElementById("3d-text-container");
+const textOnModel = document.getElementById("textOnModel");
 let scrollYHeader = 0;
 const scrollHeader = debounce((e) => {
-  console.log("paralaxx");
   const isDown = e.deltaY > 0;
 
   function scrollStep() {
@@ -40,6 +36,8 @@ const scrollHeader = debounce((e) => {
     }
     scrollYHeader += isDown ? -10 : 10;
     header.style.transform = `translateY(${scrollYHeader}px)`;
+    textOnModel.style.transform = `translateY(${scrollYHeader}px)`;
+    allText.style.transform = `translateY(${scrollYHeader}px)`;
   }
 
   requestAnimationFrame(scrollStep);
@@ -47,3 +45,27 @@ const scrollHeader = debounce((e) => {
 
 window.addEventListener("wheel", scrollBackground);
 window.addEventListener("wheel", scrollHeader);
+
+const trailerLink = document.getElementById("trailer");
+const modal = document.getElementById("trailerModal");
+const closeBtn = document.querySelector(".close");
+const trailerVideo = document.getElementById("trailerVideo");
+
+trailerLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log('joe mama')
+  modal.style.display = "block";
+  trailerVideo.src = this.href;
+});
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+  trailerVideo.src = "";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+    trailerVideo.src = "";
+  }
+});
