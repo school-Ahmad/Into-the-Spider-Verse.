@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locker Page - Spider-Verse</title>
+    <link rel="stylesheet" href="../kerim_testing/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="locker">
+            <div class="item" onclick="showDetails('Miles Morales', 'miles.webp')">
+                <img src="../kerim_testing/media/miles.webp" alt="Miles Morales">
+                <p>Miles Morales</p>
+            </div>
+            <div class="item" onclick="showDetails('Peter B. Parker', 'peter.jpg')">
+                <img src="peter.jpg" alt="Peter B. Parker">
+                <p>Peter B. Parker</p>
+            </div>
+            <div class="item" onclick="showDetails('Gwen Stacy', 'gwen.jpg')">
+                <img src="gwen.jpg" alt="Gwen Stacy">
+                <p>Gwen Stacy</p>
+            </div>
+            <div class="item" onclick="showDetails('Spider-Man Noir', 'noir.jpg')">
+                <img src="noir.jpg" alt="Spider-Man Noir">
+                <p>Spider-Man Noir</p>
+            </div>
+            <div class="item" onclick="showDetails('Peni Parker', 'peni.jpg')">
+                <img src="peni.jpg" alt="Peni Parker">
+                <p>Peni Parker</p>
+            </div>
+            <div class="item" onclick="showDetails('Spider-Ham', 'ham.jpg')">
+                <img src="ham.jpg" alt="Spider-Ham">
+                <p>Spider-Ham</p>
+            </div>
+        </div>
+        <div class="details">
+            <h2>Details</h2>
+            <img id="detailImage" src="" alt="Detail">
+            <p id="detailText"></p>
+        </div>
+    </div>
+    <script src="../kerim_testing/index.js"></script>
+</body>
+</html>
