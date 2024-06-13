@@ -28,8 +28,7 @@ const changeBackground = debounce((e) => {
   if (currentFrame <= 0) currentFrame = 1;
   if (currentFrame > totalFrames) currentFrame = totalFrames;
 
-  element.style.background = `url("./rendered_spidey/${currentFrame < 10 ? "000" : "00"
-    }${currentFrame}.webp")`;
+  element.style.background = `url("./rendered_spidey/${currentFrame < 10 ? "000" : "00"}${currentFrame}.webp")`;
 }, 5); // Adjust debounce delay as needed
 
 window.addEventListener("wheel", changeBackground);
