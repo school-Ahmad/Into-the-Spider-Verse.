@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/gallery.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Character Showcase</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="icon" type="image/x-icon" href="../media/file.png">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="galleryWrapper">
+        <div id="galleryContainer" class="gallery"></div>
+        <div class="char-info">
+            <div id="characterCard" class="character-card"></div>
+        </div>
+        <div class="button-container">
+            <i id="prev" class="fa-solid fa-arrow-left fa-2xl" onclick="prevCharacter()"></i>
+            <i id="next" class="fa-solid fa-arrow-right fa-2xl" onclick="nextCharacter()"></i>
+        </div>
+    </div>
+</body>
+
+</html>

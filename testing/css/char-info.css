@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+  padding-right: 20px; /* Add some padding to the right */
+}
+
+.character-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.character-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.character-role {
+  font-size: 16px;
+  color: #ff5e5e;
+  margin-bottom: 15px;
+}
+
+.character-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.attribute {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.attribute span {
+  font-size: 14px;
+}
+
+.bar {
+  flex-grow: 1;
+  background-color: #333;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bar-inner {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff5e5e, #ff9e5e);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.skill-icon {
+  width: 59px;
+  height: 49px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.char-info {
+  display: flex;
+  align-items: center;
+  width: 30%; /* Adjust width as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .char-info {
+    width: 40%;
+  }
+
+  .character-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .char-info {
+    width: 100%;
+    justify-content: center; /* Center the character card */
+  }
+
+  .character-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .char-info {
+    padding: 10px;
+  }
+
+  .character-card {
+    width: 100%;
+    padding: 10px;
+  }
+}
