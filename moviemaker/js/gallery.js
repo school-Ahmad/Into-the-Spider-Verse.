@@ -3,7 +3,7 @@ let characters = [
     name: "joe mama",
     strength: 50,
     speed: 55,
-    img: "../media/spiderman_standing.png",
+    img: "../media/gwen-stacy.png",
   },
   {
     name: "joe mama1",
@@ -55,9 +55,8 @@ const generateCharacter = (character, index, offset) => {
   const ratio = 1 - (offset * 0.1 > 0.8 ? 0.8 : offset * 0.1);
   char.style.width = `${width}px`;
   char.style.height = "600px";
-  char.style.transform = `scale(${ratio}) translateZ(${
-    offset * 30
-  }px) translateY(${offset * 25}px)`;
+  char.style.transform = `scale(${ratio}) translateZ(${offset * 30
+    }px) translateY(${offset * 25}px)`;
   const opacity = 1 / (offset + 1) < 0.5 ? 0.5 : 1 / (offset + 1);
   char.style.opacity = opacity;
   char.style.position = "absolute";
