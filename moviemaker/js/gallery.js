@@ -3,37 +3,37 @@ let characters = [
     name: "joe mama",
     strength: 50,
     speed: 55,
-    img: "../media/gwen-stacy.png",
+    img: "",
   },
   {
     name: "joe mama1",
     strength: 50,
     speed: 55,
-    img: "../media/superman_standing.png",
+    img: "../media/hobart-char.png",
   },
   {
     name: "joe mama2",
     strength: 50,
     speed: 55,
-    img: "../media/spiderman_standing.png",
+    img: "../media/peni-parker.png",
   },
   {
     name: "joe mama3",
     strength: 50,
     speed: 55,
-    img: "../media/superman_standing.png",
+    img: "../media/miguel-char.png",
   },
   {
     name: "joe mama4",
     strength: 50,
     speed: 55,
-    img: "../media/spiderman_standing.png",
+    img: "../media/gwen-stacy.png",
   },
   {
     name: "joe mama5",
     strength: 50,
     speed: 55,
-    img: "../media/superman_standing.png",
+    img: "../media/spiderman_standing.png",
   },
 ];
 let totalWidth = 0;
