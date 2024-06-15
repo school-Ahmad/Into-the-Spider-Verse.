@@ -4,12 +4,9 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
   font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
 }
 
 .background {
@@ -19,17 +16,49 @@ html {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: black;
+  /* background-color: black; */
 }
 
-.carousel {
+.galleryWrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+  /* height: max-content; */
+  max-width: 1200px; /* Constrain maximum width */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.gallery {
+  display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 60%;
-  perspective: 1000px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.character-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+}
+
+.button-container i {
+  font-size: 32px;
+  cursor: pointer;
+  color: white;
 }
 
 .character {
@@ -52,110 +81,92 @@ html {
   z-index: 1;
 }
 
-/* CSS for animations */
-.character {
-  transition: transform 0.5s ease-in-out;
+.character-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-  }
-
-  to {
-    transform: scale(1);
-  }
+.character-name {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-@keyframes zoomOut {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(0.8);
-  }
+.character-role {
+  font-size: 16px;
+  color: #ff5e5e;
+  margin-bottom: 15px;
 }
 
-.zoom-in {
-  animation: zoomIn 0.5s forwards;
+.character-description {
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-.zoom-out {
-  animation: zoomOut 0.5s forwards;
-}
-
-.button-container {
+.attribute {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
-  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
-.button-container i {
-  font-size: 32px;
-  /* Adjust font-size to your preference */
-  cursor: pointer;
-  background-color: white;
-}
-
-.info-container {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* Background color with transparency */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  /* Shadow for the container */
-}
-
-.info {
-  display: none;
-  /* Hide all info-boxes by default */
-}
-
-.info.active {
-  display: block;
-  /* Show only the active info-box */
-}
-
-.info h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.info p {
-  margin: 0;
+.attribute span {
   font-size: 14px;
 }
 
-.galleryWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.gallery {
-  display: flex;
-  width: 80%;
-  height: 600px;
-  justify-content: flex-start;
-  align-items: center;
-  box-shadow: 101px 22px 102px 25px rgba(0, 0, 0, 0.6) inset;
-  -webkit-box-shadow: 101px 22px 102px 25px rgba(0, 0, 0, 0.6) inset;
-  -moz-box-shadow: 101px 22px 102px 25px rgba(0, 0, 0, 0.6) inset;
-  border-radius: 15px;
-  overflow: clip;
-  padding: 5px;
+.bar {
+  flex-grow: 1;
+  background-color: #333;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 5px;
   position: relative;
 }
 
-#prev,
-#next {
-  color: white;
+.bar-inner {
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff5e5e, #ff9e5e);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.skill-icon {
+  width: 59px;
+  height: 49px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.char-info {
+  display: flex;
+  align-items: center;
+  max-width: 400px; /* Constrain maximum width */
+  padding: 0 20px; /* Add padding for breathing space */
+  box-sizing: border-box;
+}
+
+/* Character base styles */
+.character {
+  transition: opacity 1s ease-in; /* Ensure transition is applied here */
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.navbar img {
+  width: 100px;
 }

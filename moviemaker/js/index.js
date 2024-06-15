@@ -1,13 +1,15 @@
 let currentFrame = 1;
 const totalFrames = 80;
 const element = document.getElementById("spiderman");
-element.style.background = `url("./morales_spiderman/0001.webp")`;
+let folderName =
+  screen.width < 700 ? "morales_spiderman_mobile" : "morales_spiderman";
+element.style.background = `url("./${folderName}/0001.webp")`;
 
 // Preload images
 const images = [];
 for (let i = 1; i <= totalFrames; i++) {
   const img = new Image();
-  img.src = `./morales_spiderman/${i < 10 ? "000" : "00"}${i}.webp`;
+  img.src = `./${folderName}/${i < 10 ? "000" : "00"}${i}.webp`;
   images.push(img);
 }
 
@@ -21,16 +23,49 @@ function debounce(func, wait) {
   };
 }
 
+const setImageSize = () => {
+  if (screen.width < 700) {
+    folderName = "morales_spiderman_mobile";
+    element.style.backgroundSize = `cover`;
+  } else {
+    folderName = "morales_spiderman";
+  }
+};
+
 const changeBackground = debounce((e) => {
   const isDown = e.deltaY > 0;
 
   currentFrame += isDown ? 1 : -1;
   if (currentFrame <= 0) currentFrame = 1;
   if (currentFrame > totalFrames) currentFrame = totalFrames;
-
-  element.style.background = `url("./morales_spiderman/${
+  if (currentFrame > 8) {
+    const trailerBtn = document.getElementById("textOnModel");
+    requestAnimationFrame(() => {
+      trailerBtn.style.opacity = 0;
+    });
+  } else {
+    const trailerBtn = document.getElementById("textOnModel");
+    requestAnimationFrame(() => {
+      trailerBtn.style.opacity = 1;
+    });
+  }
+  if (currentFrame > 24) {
+    const galleryBtn = document.getElementById("galleryBtn");
+    requestAnimationFrame(() => {
+      galleryBtn.style.opacity = 1;
+    });
+  }
+  if (currentFrame <= 18 || currentFrame >= 37) {
+    const galleryBtn = document.getElementById("galleryBtn");
+    requestAnimationFrame(() => {
+      galleryBtn.style.opacity = 0;
+    });
+  }
+  element.style.background = `url("./${folderName}/${
     currentFrame < 10 ? "000" : "00"
   }${currentFrame}.webp")`;
+  setImageSize();
 }, 5); // Adjust debounce delay as needed
 
+setImageSize();
 window.addEventListener("wheel", changeBackground);

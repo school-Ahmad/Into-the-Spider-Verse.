@@ -12,15 +12,22 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <a href="../index.html">
+            <img class="navbar" src="../media/file.png" alt="logo">
+        </a>
+    </nav>
     <div class="background"></div>
     <div class="galleryWrapper">
-        <div id="galleryContainer" class="gallery"></div>
+        <div class="character-carousel">
+            <div class="gallery" id="galleryContainer"></div>
+            <div class="button-container">
+                <i id="prev" class="fa-solid fa-arrow-left fa-2xl" onclick="prevCharacter()"></i>
+                <i id="next" class="fa-solid fa-arrow-right fa-2xl" onclick="nextCharacter()"></i>
+            </div>
+        </div>
         <div class="char-info">
             <div id="characterCard" class="character-card"></div>
-        </div>
-        <div class="button-container">
-            <i id="prev" class="fa-solid fa-arrow-left fa-2xl" onclick="prevCharacter()"></i>
-            <i id="next" class="fa-solid fa-arrow-right fa-2xl" onclick="nextCharacter()"></i>
         </div>
     </div>
 </body>

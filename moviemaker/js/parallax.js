@@ -54,7 +54,7 @@ const trailerVideo = document.getElementById("trailerVideo");
 trailerLink.addEventListener("click", function (event) {
   event.preventDefault();
   modal.style.display = "block";
-  trailerVideo.src = this.href;
+  trailerVideo.src = "https://vidsrc.to/embed/movie/tt9362722";
 });
 
 closeBtn.addEventListener("click", function () {
