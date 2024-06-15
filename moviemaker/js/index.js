@@ -32,9 +32,7 @@ const setImageSize = () => {
   }
 };
 
-const changeBackground = debounce((e) => {
-  const isDown = e.deltaY > 0;
-
+const changeBackground = (isDown) => {
   currentFrame += isDown ? 1 : -1;
   if (currentFrame <= 0) currentFrame = 1;
   if (currentFrame > totalFrames) currentFrame = totalFrames;
@@ -65,7 +63,19 @@ const changeBackground = debounce((e) => {
     currentFrame < 10 ? "000" : "00"
   }${currentFrame}.webp")`;
   setImageSize();
+};
+const changeBackgroundDesktop = debounce((e) => {
+  const isDown = e.deltaY > 0;
+  changeBackground(isDown);
 }, 5); // Adjust debounce delay as needed
+let lastY = 0;
+
+const changeBackgroundMobile = debounce((e) => {
+  const isDown = e.touches[0].clientY < lastY;
+  changeBackground(isDown);
+  lastY = e.touches[0].clientY;
+}, 16);
 
 setImageSize();
-window.addEventListener("wheel", changeBackground);
+window.addEventListener("wheel", changeBackgroundDesktop);
+window.addEventListener("touchmove", changeBackgroundMobile);

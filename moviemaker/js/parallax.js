@@ -45,6 +45,8 @@ const scrollHeader = debounce((e) => {
 
 window.addEventListener("wheel", scrollBackground);
 window.addEventListener("wheel", scrollHeader);
+window.addEventListener("touchmove", scrollBackground);
+window.addEventListener("touchmove", scrollHeader);
 
 const trailerLink = document.getElementById("trailer");
 const modal = document.getElementById("trailerModal");

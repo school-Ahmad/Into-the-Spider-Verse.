@@ -92,6 +92,9 @@ h1 {
   .text-on-model-container-2 {
     top: 26% !important;
   }
+  .scrollbar {
+    display: none;
+  }
 }
 .text-on-model-container-2 {
   position: absolute;
@@ -218,4 +221,3 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
-
