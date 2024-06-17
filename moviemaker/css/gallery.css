@@ -28,7 +28,8 @@ html {
   width: 100%;
   min-height: 100vh;
   /* height: max-content; */
-  max-width: 1200px; /* Constrain maximum width */
+  max-width: 1200px;
+  /* Constrain maximum width */
   padding: 20px;
   box-sizing: border-box;
   margin: auto;
@@ -152,21 +153,35 @@ html {
 .char-info {
   display: flex;
   align-items: center;
-  max-width: 400px; /* Constrain maximum width */
-  padding: 0 20px; /* Add padding for breathing space */
+  max-width: 400px;
+  /* Constrain maximum width */
+  padding: 0 20px;
+  /* Add padding for breathing space */
   box-sizing: border-box;
 }
 
 /* Character base styles */
 .character {
-  transition: opacity 1s ease-in; /* Ensure transition is applied here */
+  transition: opacity 1s ease-in;
+  /* Ensure transition is applied here */
 }
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
+
 .navbar img {
   width: 100px;
+  transition: transform .9s;
+  /* Animation */
+
+}
+
+.navbar img:hover {
+  transform: scale(1.5);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
 }
