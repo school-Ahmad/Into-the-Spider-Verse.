@@ -33,23 +33,27 @@ body {
   --item5-opacity: 0;
 }
 header {
-  width: 1140px;
-  max-width: 90%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin: auto;
   height: 50px;
-  align-items: center;
   margin-bottom: 90px;
   flex-direction: row;
+  z-index: -1;
 }
 /*logo*/
+.spider_logo {
+  z-index: -1;
+}
 .spider_logo img {
-  display: flex;
-  justify-content: center;
-  position: fixed;
+  width: max-content;
+  height: max-content;
+  margin: 0 auto;
+  margin-top: 3vh;
   width: 100px;
   transition: transform 0.9s;
+  z-index: -1;
   /* Animation */
 }
 .spider_logo img:hover {
@@ -395,10 +399,10 @@ header {
   pointer-events: none;
 }
 .carousel::before {
-  width: 500px;
+  width: 900px;
   height: 300px;
   content: "";
-  background-image: linear-gradient(70deg, #dc422a, blue);
+  background-image: linear-gradient(70deg, #ff0000, blue);
   position: absolute;
   z-index: -1;
   border-radius: 50% 80% 80% 10%;
