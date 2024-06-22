@@ -4,6 +4,7 @@ body {
   background-color: #000000;
   font-family: Poppins;
   color: white;
+  overflow: hidden;
 }
 
 :root {
@@ -34,23 +35,19 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: auto;
-  height: 50px;
-  margin-bottom: 90px;
-  flex-direction: row;
-  z-index: -1;
+  height: max-content;
+  margin-top: 10px;
+  width: 100%;
 }
 /*logo*/
 .spider_logo {
   z-index: -1;
+  width: max-content;
+  margin: 0 auto;
 }
 .spider_logo img {
-  width: max-content;
-  height: max-content;
-  margin: 0 auto;
-  margin-top: 3vh;
   width: 100px;
   transition: transform 0.9s;
   z-index: -1;
@@ -63,9 +60,8 @@ header {
 /* carousel */
 .carousel {
   position: relative;
-  height: 800px;
-  overflow: hidden;
-  margin-top: -50px;
+  height: 90vh;
+  width: 100%;
 }
 .carousel .list {
   position: absolute;
@@ -351,12 +347,11 @@ header {
 .arrows {
   position: absolute;
   bottom: 10px;
-  width: 1140px;
-  max-width: 90%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: center;
+  left: 0px;
+  gap: 200px;
 }
 #prev,
 #next {
@@ -451,14 +446,13 @@ header {
 }
 @media screen and (max-width: 767px) {
   /* mobile */
-  .spider_logo img {
-    margin-left: -48px;
-  }
   .carousel .list .item img {
     height: auto;
   }
   .carousel {
-    height: 600px;
+    margin-top: -80px;
+    overflow: hidden;
+    height: 102vh;
   }
   .carousel .list .item {
     width: 100%;

@@ -54,12 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
         carousel.classList.remove("next", "prev");
         carousel.classList.add("showDetail");
         backButton.style.display = "inline";
+        // Hide next and prev buttons
+        nextButton.style.display = "none";
+        prevButton.style.display = "none";
       };
     });
 
     backButton.onclick = function () {
       carousel.classList.remove("showDetail");
       backButton.style.display = "none";
+      // Show next and prev buttons again
+      nextButton.style.display = "inline";
+      prevButton.style.display = "inline";
     };
   };
 
