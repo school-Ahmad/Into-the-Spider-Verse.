@@ -421,7 +421,7 @@ header {
 }
 .carousel::before {
   width: 900px;
-  height: 300px;
+  height: 700px;
   content: "";
   background-image: linear-gradient(70deg, #ff0000, blue);
   position: absolute;
