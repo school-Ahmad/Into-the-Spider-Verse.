@@ -42,7 +42,6 @@ header {
   align-items: center;
   margin-bottom: 90px;
   flex-direction: row;
-  background-color: trans;
 }
 /*logo*/
 .spider_logo img {
@@ -427,6 +426,9 @@ header {
 }
 @media screen and (max-width: 767px) {
   /* mobile */
+  .spider_logo img {
+    margin-left: -48px;
+  }
   .carousel .list .item img {
     height: auto;
   }
