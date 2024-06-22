@@ -35,8 +35,10 @@ seeMoreButtons.forEach((button) => {
   button.onclick = function () {
     carousel.classList.remove("next", "prev");
     carousel.classList.add("showDetail");
+    backButton.style.display = "inline"; // Show "BEKIJK ALLES" button
   };
 });
 backButton.onclick = function () {
   carousel.classList.remove("showDetail");
+  backButton.style.display = "none"; // Hide "BEKIJK ALLES" button
 };

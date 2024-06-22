@@ -403,6 +403,7 @@ header {
   transition: opacity 0.5s;
   cursor: pointer;
   color: white;
+  display: none;
 }
 #back:hover {
   background: #ffffff3a;
