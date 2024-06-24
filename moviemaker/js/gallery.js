@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="title">${character.actor}</div>
           <div class="topic">${character.alias}</div>
           <div class="des">${character.shortDescription}</div>
-          <button class="seeMore">Bekijk meer &#8599</button>
+          <button class="seeMore">Lees meer &#8599</button>
         </div>
         <div class="detail">
           <div class="title">${character.alias}</div>
