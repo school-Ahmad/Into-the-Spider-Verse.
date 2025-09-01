@@ -4,7 +4,7 @@
 
 <p id="description">Over het project In opdracht van Pickstar Studios gespecialiseerd in filminterfaces hebben we een interactieve interface ontwikkeld die gebruikt kan worden in een film of tv-serie. Deze interfaces zien er futuristisch uit en ondersteunen de technologie en sfeer van het verhaal maar zijn ook daadwerkelijk bedienbaar. Voor dit project is gekozen voor de interface uit de Spider-Man verse die we hebben gemoderniseerd en volledig functioneel hebben gemaakt met echte interactie in plaats van statische gegevens.</p>
 
-<p align="center"><img src="![Languages](https://img.shields.io/badge/Languages-JavaScript%2C%20HTML%2C%20CSS-blue)" alt="shields"><img src="![Last Commit](https://img.shields.io/github/last-commit/school-Ahmad/Into-the-Spider-Verse)" alt="shields"><img src="![License](https://img.shields.io/badge/License-MIT-green)" alt="shields"><img src="![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen)" alt="shields"></p>
+<p align="center"><img src="![Languages](https://img.shields.io/badge/Languages-JavaScript%2CHTML%2CCSS-blue)" alt="shields"><img src="![Last Commit](https://img.shields.io/github/last-commit/school-Ahmad/Into-the-Spider-Verse?style=flat-square)" alt="shields"><img src="![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)" alt="shields"><img src="![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)" alt="shields"></p>
 
 <h2>🚀 Demo</h2>
 
@@ -19,3 +19,7 @@
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
+
+*   3D effect
+*   Parallax Effect
+*   
