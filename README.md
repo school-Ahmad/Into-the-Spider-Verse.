@@ -6,7 +6,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Languages-JavaScript%2CHTML%2CCSS-blue" alt="Languages">
-  <img src="https://img.shields.io/github/last-commit/school-Ahmad/Into-the-Spider-Verse" alt="Last Commit">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen" alt="Project Status">
 </p>
