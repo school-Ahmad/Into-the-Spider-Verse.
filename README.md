@@ -22,4 +22,3 @@ Here're some of the project's best features:
 
 *   3D effect
 *   Parallax Effect
-*   
